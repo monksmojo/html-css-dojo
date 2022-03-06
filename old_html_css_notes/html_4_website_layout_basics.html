@@ -1,0 +1,66 @@
+<!--
+    this html document contains basic html5 semantics
+    ie.
+    1.a header
+    2.a navbar
+    3.a section which is the showcase
+    4.a section which is main floated to left
+    5.a aside with id aside floated to right
+    6.a footer
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Website_layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../web development/css/css_4_website_layout_basic.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <header id="main-header">
+        <div class="container">
+            <h1>MY WEBSITE</h1>
+        </div>
+        <!--the content of the header is displayed in a container-->
+    </header>
+    <nav id="nav-bar">
+        <div class="container">
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <!--the content of the navbar is displayed in a container-->
+    </nav>
+    <section id="showcase">
+        <div class="container">
+            <h1>showcase</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, quod!</p>
+        </div>
+        <!--the content of this section is displayed in a container-->
+    </section>
+    <div class="container">
+        <section id="main">
+            <h1>Welcome</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, modi.</p>
+        </section>
+        <aside id="sidebar">
+            <h1>aside</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, fugiat.</p>
+        </aside>
+    </div>
+    <!--the main section and aside section is displayed in a container
+    so that they can be displayed in center-->
+    <footer id="footer">
+        <p>copyright &copy; 2017 my website </p>
+        <!--&copy; gives copyright sign -->
+    </footer>
+</body>
+
+</html>

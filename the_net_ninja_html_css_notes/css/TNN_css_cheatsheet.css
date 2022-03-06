@@ -1,0 +1,430 @@
+/* HTML & CSS crash course by the NET NINJA
+DOCUMENTATION
+CSS CHEAT SHEET DOCUMENTATION
+REFERENCE- THE NET NINJA */
+
+/*
+css stands for cascading style sheet. It is the list of rule set use to decorate the html web page.
+A rule set is made up of- 
+
+1-Selectors---a selectors are just tag names,id names,class name use to hook css rule to a particular tag or element. for ex- h1,p,li,div(tag name) #username #header(id name) .nav-header .btn-danger(class name)
+
+2-curly braces--- curly braces defines the starting an ending of a single rule.
+
+3-declaration/property---these are the key value pair applied to the html tag or element
+
+example of css rule set
+
+1.--div {
+  color: red;
+  margin: 20px;
+}
+
+
+div is a selector
+{} defines starting and ending
+color:red;
+margin:20px-are properties
+
+2.---li {
+  font-weight: bold;
+} 
+*/
+/* three ways to declare css 
+
+1. inline
+    by using a style attribute inside a tag element
+    an inline css is used to apply unique style to a single html element
+
+2. internal
+    by using a <style> tag inside <head></head> section of the html page
+    an internal css is used to define css of a single web page
+
+3. external
+    by using external css file.
+    an external css file is used to style multiple html pages simultaneously
+    an external css is added by adding <link> tag inside the <head></head> section of the html pages   
+*/
+
+/* the different type of selectors and there combination
+1) #id <--- id selector to hook tag with the defined id to the css.
+id are mostly unique and mostly applied to a single/parent tags.
+
+2) .class-name <--- class selector to hook tags define with declared class-name to css. class are mostly use to hook multiple tags to css  
+
+3) h1,h2,div,p <-- we can directly can use tags to hook them to css
+
+we can use combination of the above selectors to define net selectors that tag particular tags */
+
+/* the below selector contains id = introduction and h2 tag.
+the below selector target all those h2 tags whose parent is a tag with id introduction*/
+
+*,
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+#introduction > h2 {
+  color: orange;
+  background-color: slategrey;
+  font-size: 20px;
+  text-decoration: bold;
+  /* line-through property puts a strike line trough text */
+}
+
+/* the below selector target all those p tags whose parent is div tag with id introduction
+">" is use to target the immediate children of defined selector */
+div#introduction > p {
+  color: blue;
+}
+
+/* the below selector target all those a tags whose parent is div tag with id introduction*/
+div#introduction > a {
+  text-decoration: none;
+  /* text-decoration: none; removes the default underline beneath the anchor tag text */
+  font-size: 20px; /* increase font size to 20 */
+  font-weight: bolder; /*USE TO INSERT BOLD weight TO TEXT*/
+  color: goldenrod; /*changes color of the text*/
+}
+
+div#introduction > ul {
+  list-style-type: none;
+  /*removes the bullets from the list item by default its discs*/
+  /* border-width: 2px;
+  border-style: solid;
+  border-color: red;
+  instead of defining border like this we use shorthand */
+  border: 2px solid rebeccapurple; /*will be applied to all 4 sides*/
+  border-bottom: 3px dotted rebeccapurple; /*will applied to bottom only*/
+  border-top: 3px dashed rebeccapurple; /*will applied to top only*/
+  /* /like this we can apply border to all 4 sides separately also/ */
+
+  /* padding/margin: 20px; padding/margin of 20px applied to all 4 sides
+  padding-top/margin-top: 10px; padding/margin only to top
+  padding-left/margin-left: 10px; padding/margin only to left
+  or we can use shorthand */
+  /* padding/margin: top right bottom left; 
+  padding/margin: top&bottom left&right*/
+  padding: 10px 20px 10px 20px;
+  margin: 5px 10px 5px 10px;
+}
+
+/* the below selector target all those p tags with class .news-article*/
+p.news-article {
+  color: dimgrey; /*changes text color */
+  word-spacing: 5px; /*gives spaces of 5px between words*/
+  letter-spacing: 2px; /*gives spaces of 2px between each alphabet of word*/
+  line-height: 20px; /*gives distance of 50 pixels between each line*/
+  font-family: helvetica; /*changes the fault family of the text to helvetica*/
+  /*by default its times new roman. the above fonts are called web safe fonts as they are supported by most of the browser/ browser are preloaded with these fonts*/
+  column-count: 2;
+  /*divides the paragraph into columns.The no. of columns depend on the no. specified. Gives it a news newspaper vies */
+  column-gap: 20px; /*increase distance between columns*/
+  margin: 10px 10px;
+}
+
+/* box-model-every element in the html is made of box 
+each box contains contains 4 parts
+1. content:the area occupied by content in the tags
+2. padding-space between content and the border.
+3. border-border usually contains content and padding. use to separate two different boxes.
+4. margin-space between margin of two boxes. 
+*/
+
+/*RGB color and hex-code color are ways to assign color to tags/content
+RGB channel contains three channel
+1.red channel
+2.green color
+3.blue color 
+
+hex-code contains 6digit code followed by # for ex #ebebeb
+the first two digit depicts red channel
+the middle two digits depicts green channel
+the last two digit depicts blue channel*/
+
+/*3 types of elements in box model
+1.inline elements--elements lie next to each other and take only the space of the content
+tags include span,a,strong,em,img and more.
+we can apply margin to only left and right of the elements and border/padding to all 4 sides.
+
+2.block elements-takes full length width of the page
+tags include p,div,h1,h2,h3 and more.
+we can apply margin and padding to all 4 sides of the elements and border to all 4 sides.
+
+3.inline-block elements--elements lie next to each other and take only the space of the content.
+but its the best of both worlds it has advantages of both block level elements as well as inline level elements
+tags can be converted to inline block using display: property which has the 
+value of block inline-block and block value 
+we can apply margin and padding to 4 sides of the elements and border to all 4 sides.*/
+
+#inline-element {
+  box-sizing: border-box;
+  display: block;
+  padding: 10px;
+  background-color: #777474;
+  color: rgb(255, 255, 255);
+}
+#inline-element > strong,
+#inline-element > em,
+#inline-element > a {
+  font-size: 22px;
+  border: 2px dotted white;
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+  color: white;
+}
+/*converting inline to block*/
+#inline-element > span {
+  box-sizing: border-box;
+  display: block;
+  margin: 20px 10px;
+  padding: 5px;
+  border: 2px solid white;
+}
+
+#block-element {
+  box-sizing: border-box;
+  display: block;
+  margin: 10px 0px;
+  padding: 10px;
+  background-color: rgb(134, 245, 245);
+  color: #000000;
+}
+#block-element > div,
+#block-element > p {
+  font-size: 22px;
+  border: 2px dotted black;
+  padding: 10px;
+  margin: 10px;
+}
+/*converting block to inline*/
+#block-element > h3 {
+  box-sizing: border-box;
+  display: inline;
+  margin: 10px;
+  padding: 5px;
+  border: 2px solid black;
+}
+
+#inline-block-element {
+  font-family: monospace;
+  font-size: 24px;
+  background: black;
+  color: white;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+#inline-block-element > ul {
+  list-style-type: none;
+  display: block;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  margin: 0px 10px;
+}
+
+#inline-block-element > ul li {
+  box-sizing: border-box;
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px 0px 10px 15%;
+  padding: 10px;
+}
+#inline-block-element > ul li:hover {
+  box-sizing: border-box;
+  border: 2px solid white;
+}
+
+#selectors {
+  background-color: rgb(248, 196, 127);
+  color: black;
+  padding: 10px;
+}
+
+/* the below selector targets p tag having multiple classes whose parent is a div with id "selectors" */
+
+div#selectors > p.success.feedback {
+  background-color: goldenrod;
+  color: black;
+  padding: 10px;
+}
+
+/* the below selector targets p tag having  class success*/
+p.success {
+  color: green;
+  font-weight: 800;
+}
+
+/* the below selector targets p tag having  class error*/
+p.error {
+  font-weight: 800;
+  color: red;
+}
+
+/*defining a selector who targets anchor tag with class question whose parent is a div with id selector*/
+/*A*/
+div#selectors > a.question {
+  text-decoration: none;
+  color: blue;
+  background-color: darksalmon;
+}
+
+/*a selector who targets a tag based on its attributes*/
+/*B*/
+a[href="https://www.yahoo.com"] {
+  text-decoration: none;
+  color: white;
+  background-color: darkred;
+}
+/*the above selector targets all the anchor tag with href attribute having value set to href="https://www.yahoo.com"*/
+/*A and B both target to the same element in html file but since "div#selectors > a.question"  has more precidence, so it work on html*/
+
+/*cascade means flowing down of property from top to bottom*/
+#inheritance {
+  color: coral;
+  background-color: black;
+  font-family: monospace;
+  font-size: 24px;
+  margin: 10px;
+  padding: 10px;
+}
+/*yo will see the property of parent div tag is applied to all its children i.e both the p tags. this is know as inheritance.
+most of the color and text related properties are inherited*/
+
+/*but some properties are not inherited for example margin padding
+we can also perform explicit inheritance*/
+/*A*/
+#inheritance > p {
+  font-family: inherit;
+  margin: inherit; /*calling explicit inheritance*/
+  border: 1px solid white;
+  padding: 10px;
+}
+/*B*/
+#inheritance > p {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 5px; /*calling explicit inheritance*/
+  border: 4px solid skyblue;
+  padding: 5px;
+  color: white;
+}
+/* both a and b selector targets same element in html.
+but css works down from top to bottom so the selector at the bottom of the css has more weight */
+
+/*
+now we will learn about how to position elements in the html file using the position properties we have in css3
+types of position properties
+1. Static- by default ech element in the html web page is in static position it defines the normal flow of the webpage.
+
+2. relative-relative change the position of the element relative to its original position.
+when element is moved around its original position its space is still left on the web page.
+we mostly apply relative position to a parent element so that we can give absolute position to its child.
+
+.parent{
+  position:relative;
+  left:20px;
+  bottom:20px;
+}
+
+left:20px means 20px from left of its original position
+bottom:20px; means 20px above from the bottom of its original position
+
+3. fixed- makes element fixed to the viewport of the webpage.
+viewport-is the area in which we see the web-page.
+.nav{
+  position:fixed;
+  left:0px;
+  top:0px;
+}
+so the nav element is sticked to its top position of the viewport
+
+4. absolute- absolute position allow us to position the element absolutely to its closet parent.
+.parent{
+  position:relative;
+}
+
+.child{
+  position:absolute;
+  top:0; 0px from top of parent
+  left:50; 50 px left from parent
+}
+ in absolute when we move an element its space is taken by the successive element
+*/
+
+div.position {
+  background-color: greenyellow;
+}
+
+.relative-element {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+.relative-pos {
+  background-color: darkkhaki;
+  position: relative;
+}
+
+.relative-pos img {
+  max-width: 100%;
+  height: auto;
+}
+
+nav.absolute-pos {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+nav.absolute-pos > ul {
+  list-style: none;
+  background-color: #000000;
+  opacity: 0.9;
+}
+
+nav.absolute-pos > ul > li {
+  box-sizing: border-box;
+  font-size: 24px;
+  font-weight: 800;
+  font-family: monospace;
+  color: white;
+  margin: 0px 10px;
+  text-align: center;
+  display: inline-block;
+  width: 20%;
+  cursor: pointer;
+}
+
+nav.absolute-pos > ul > li:hover {
+  background-color: white;
+  color: black;
+}
+
+.bg {
+  box-sizing: border-box;
+  background-image: url("/images/img_parallax.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1.bg-heading {
+  background-color: #ebebeb;
+  opacity: 0.9;
+  color: #000000;
+  text-transform: uppercase;
+  padding: 10px;
+}
+h1.bg-heading > span {
+  text-align: center;
+}

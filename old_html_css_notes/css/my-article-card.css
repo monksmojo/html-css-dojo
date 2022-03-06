@@ -1,0 +1,49 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+.clearfix{
+    content:'';
+    clear: both;
+}
+
+
+.article-card{
+display:inline-block; 
+width: 40%;
+background-color: rgb(233, 236, 236);
+margin: 10px auto;
+padding: 10px;
+box-shadow: 0 4px 8px 0 rgb(0, 204, 255);
+}
+
+.secondary-btn{
+    margin: 10px;
+    border-radius: 10px;
+    padding: 0.5rem 0.5rem;
+    display: inline-block;
+    border: 0;
+    font-weight: 500;
+    background: #d05c69;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
+}
+.secondary-btn:hover{
+    box-shadow: 0 4px 8px 0 #d05c69;
+}
+
+.article-card::after{
+    content:'';
+    clear: both;
+}

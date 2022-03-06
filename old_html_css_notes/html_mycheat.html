@@ -1,0 +1,207 @@
+<!--html is hyper text markup language-->
+<!--not a programming language beacause it does not use any login-->
+<!--html does not work alone we use css with java script -->
+<!--html uses tags to represent data on web browser-->
+<!--html tags are surrounded by angel brackets-->
+<!--tags come in pair we have opening tag and a closing tag-->
+<!--<tags>content</tags>-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Html cheat sheet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <small>GO TO <a href="html5_semantics.html"><strong>HTML5 semantics exapmle THE GOOD TIMES</strong></a></small>
+    hello this text is without tags
+    <!--heading tags vary from h1 to h6-->
+    <h1>this is in h1 tag</h1>
+    <h2>this is a h2 tag</h2>
+    <h3>this is a h3 tag</h3>
+    <h4>this is a h4 tag</h4>
+    <h5>this is a h5 tag</h5>
+    <h6>this is a h6 tag</h6>
+    <!--paragraph tags-->
+    <p>
+        <!--to genrate random text /dummy text for testing in tag write lorem or lorem 10-->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quaerat.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non consequatur magnam laborum hic iste praesentium
+        animi provident dicta nesciunt architecto. Autem iure illum ad quaerat, ratione doloremque aperiam. Nesciunt,
+    </p>
+    <!--some tags close themself and are called as self closing tags and are part of xhtml-->
+    <!--br tags -->
+    <!--inline vs block level coding-->
+    <!--inline vs block level elements
+    inline elements
+    -do not start on a new line
+    -take only the necessary width
+    ex <spam> <img> <a> 
+    block element
+    -start on a new line take full width available
+    ex- <div>
+        <h1> to <h6>
+        <form>-->
+    <!--to wrap a text inside a text use shortcut ctrl+w-->
+    <p>
+        <strong>strong tag is inline and make text bold and stand out</strong>
+        <em>em tag makes text italic and also is inline</em><a href="http://google.com" target="_blank">GOOGLE</a>
+        <p>
+            a tag is an anchor tag it makes the text to work as link it has many atributes two main atributes are href
+            whis is the link to other site and target="_blank" which opens the link in tag
+        </p>
+        <p>
+            atributes provide properties of tag comes in always key value pair of key="and its value"
+
+        </p>
+
+    </p>
+    <!--LIST 
+    1) unordered list
+    2) ordered list-->
+    <ul>
+        <li>unordered list</li>
+        <li>uses bullet point(type disc)</li>
+        <li>also add default padding</li>
+        <li>also give margins</li>
+        <li>use for navbar</li>
+    </ul>
+    <ol>
+        <li>ordered list</li>
+        <li>uses no.s(type disc)</li>
+        <li>also add default padding</li>
+        <li>also give margins</li>
+        <p/olp> <!--tables--></br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>name</th>
+                        <th>email</th>
+                        <th>age</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>monks_mojo</td>
+                        <td>mr.draco.monk@gmail.com</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>jhon doe</td>
+                        <td>jhon21@gmail.com</td>
+                        <td>21</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <!--line break is br tag-->
+            <hr>
+            <!--horizontal line tag-->
+
+            <p><strong>FORMS</strong></p>
+            <form action="process.php" method="POST">
+                <!--submit a form to a perticular php or django page where it get processed-->
+                <!--post method is use to  request server to add data to database more secure
+            get method also use request server to add data to database less securre -->
+                <!--input and label are inline takes only limited width so we use div cause they are block level tag take line space-->
+                <div>
+                    <label>First Name</label>
+                    <input type="text" name="FirstName" placeholder="Enter First Name">
+                    <!--place holder attribute of input tag provides values description that needed to be entered into the input-->
+                </div>
+                <div>
+                    <label>Last Name</label>
+                    <input type="text" name="LastName" placeholder="Enter Last Name">
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="email" name="Email" placeholder="Enter Email Address">
+                    <!--html provide email input type with email validation-->
+                </div>
+                <div>
+                    <label for="Message">Message</label>
+                    <textarea name="Message" id="" cols="30" rows="10" placeholder="leave a comment"></textarea>
+                    <!--html provide a seprate textarea tag for textarea input -->
+                </div>
+                <div>
+                    <label for="Gender">Gender</label>
+                    <select name="Gender" id="">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Non Binary">Non Binary</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="Age">Age</label>
+                    <input type="number" name="Age" placeholder="Enter Your Age">
+                </div>
+                <div>
+                    <label for="Date Of Birth">Date of birth</label>
+                    <input type="date" name="Date Of Birtth" placeholder="Enter Your Dob">
+                </div>
+                <div>
+                    <label>Fruits You Like</label><br>
+                    <input type="checkbox" name="banana_checkbox" value="banana"><label>BANANA</label><br>
+                    <input type="checkbox" name="apple_checkbox" value="apple"><label>APPLE</label><br>
+                    <input type="checkbox" name="mango_checkbox" value="mango"><label>MANGO</label></br>
+                </div>
+                <div>
+                    <label>DO YOU LIKE HTML</label><br>
+                    <input type="radio" name="radio_input" value="true"><strong>yes</stron><br>
+                        <input type="radio" name="radio_input" value="false"><strong>no</stron><br>
+                </div>
+                <div>
+                    <input type="submit" value="submit the form">
+                    <input type="button" value="button the button">
+                </div>
+            </form>
+            <!--BUTTON-->
+            <!--use click attribute to call javascript function-->
+            <button>YO RESET</button>
+            <!--Image-->
+            <!--image tag use src attribute that takes the path of image in directory-->
+            <!--alt attribute display text when it can't load the image-->
+            <!--image tag also comes width and height attribute
+            by deafault height and margin are auto-->
+            <br>
+            <img src="images/sample_bird.jpg" alt="sample_bird.jpg" width="200px" height="auto">
+            <a href="images/sample_eagle.jpg" target="_blank">
+            <br>
+            <img src="images/sample_eagle.jpg" alt="sample_eagle.jpg"height="auto"></a>
+            <!--you can alsoput anchor tag around image tag which makes a image a hyperlink and you can navigate to to other pages-->
+            <!--or can open image in new window-->
+
+            <!--Quotation The HTML <q> element defines a short quotation.
+            Browsers usually insert quotation marks around the <q> element-->
+            <br>
+            Quotation The HTML  element defines a short quotation.
+            Browsers usually insert quotation marks around the <q> element</q>
+            <!--blockquote The HTML <blockquote> element defines a section that is quoted from another source.
+            Browsers usually indent <blockquote> elements.-->
+            <blockquote cite="https://www.google.com">blockquote The HTML  element defines a section that is quoted from another source.
+            Browsers usually indent elements</blockquote>
+            <!--abbrevation tag The HTML <abbr> element defines an abbreviation or an acronym. Marking abbreviations can give useful information to browsers, translation systems and search-engines.-->
+            <p>THE <abbr title="HYPER TEXT MARKUP LANGUAGE">HTML</abbr> IS AWESOME</p>
+            <!--The HTML cite element defines the title of a work.Browsers usually display cite elements in italic-->
+            <p>html cheat sheet by <cite>monks_mojo</cite> cite tag used </p>
+            <!--he HTML <bdo> element defines bi-directional override.The <bdo> element is used to override the current text direction:-->
+            <bdo dir="rtl">This text will be written from right to left</bdo>
+            <br>
+            <bdo dir="ltr">This text will be written from left to right</bdo>
+            <br>
+            <!--The HTML <address> element defines contact information (author/owner) of a document or an article.The <address> element is usually displayed in italic. Most browsers will add a line break before and after the element.-->
+            <address>
+            Written by monks_mojo.<br> 
+            Visit us at:<br>monks_mojo.com<br>
+            hidden in the leaf village<br>
+            main land
+            </address>
+</body>
+
+</html>

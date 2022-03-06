@@ -1,0 +1,299 @@
+<!--HTML & CSS crash course by the NET NINJA-->
+<!--DOCUMENTATION-->
+<!--Documentation is made by referencing THe net ninja tutorials -->
+<!-- A 11 part video series with project
+# 1 INTRODUCTION
+Q- What is html
+Ans- > a hyper text markup language
+> it is a markup language not a programming language
+> used to structure web pages
+> defines the structure of images,text,form etc
+> we structure content using html-tags/ html-elements  
+>the html tags(<p></p><a></a><img>) are rendered by the browser and the content of the web page is displayed.
+> html tags also define order of the content in the browser 
+
+Q- what is css?
+Ans - Cascading Style Sheet
+> it is used to style the web pages to make them look good, better and beautiful
+> it is used to change the color, position, font, font-size of the content on the web page 
+-->
+<!DOCTYPE html>
+<!-- !DOCTYPE html tells the browser that look the following document is gonna be a html -->
+<!-- !DOCTYPE html is a html5 semantics -->
+<html lang="en">
+<!-- Root tag of every html page -->
+
+<head>
+  <!--the content which is put inside the head tag does not render on the web page it act as the extra data or meta data -->
+  <meta charset="UTF-8" />
+  <!-- The charset attribute specifies the character encoding for the HTML document   
+    utf-8 character encoding is used by most of the web browser another type of encoding is the ascii -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--A <meta> viewport element gives the browser instructions on how to control the page's dimensions and scaling.
+    The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+    The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- The X-UA-Compatible meta tag allows web authors to choose what version of Internet Explorer the page should be rendered as.here we have declared the microsoft edge -->
+  <title>The Net Ninja HTML & CSS Crash course</title>
+  <!--gives the title of the web page shown in the tab space-->
+  <!--a example of how to implement internal css.An internal css is used define the style of the single web     page an internal css is defined by declaring a style tag inside -->
+
+  <!--a example of how to implement internal css.An internal css is used define the style of the single web     page an internal css is defined by declaring a style tag inside head section of the web page-->
+  <style>
+    td{
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <!--the content we declare inside the body -->
+  <p>
+    Hello Ninjas My first paragraph it is represented by p tag represent
+    paragraph tags and used to display paragraph on web pages
+  </p>
+  <br />
+  <hr />
+  <strong>Web Ninja inside strong tag</strong>
+  <p>
+    strong tags makes something bold, makes something important in the eyes of
+    the browser
+  </p>
+  <br />
+  <hr />
+  <em> em tag makes text italic</em>
+  <br />
+
+  <div class="heading-tag">
+    <hr />
+    <p>next we will see heading tags</p>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    <p>
+      heading tags start from h1 and goes till h6 while h1 being the biggest
+      heading and h6 being the smallest either h1>h2>h3>h4>h5>h6
+    </p>
+    <hr />
+  </div>
+
+  <div class="list-tag">
+    <p>now we will show you ul/ol/li tags</p>
+    <p>these tags are used to create list</p>
+    <p>ul: stands for unordered list</p>
+    <p>ol: stands for ordered list</p>
+    <p>li: stand for list items we declare inside ul/ol tags</p>
+    <em>ul:unordered list</em>
+    <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+    </ul>
+    <p>
+      different between ordered and unordered list is that ordered list use
+      1,2,3,4 to represent list item and unordered list use bullet points to
+      represent the list item
+    </p>
+    <em>ol:ordered list</em>
+    <ol>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+    </ol>
+  </div>
+
+  <hr />
+  <br />
+  <p>
+    <em>div tags</em> they are used to divide the webpages into different
+    sections.its a block type element i have putted list part and heading part
+    in different div tag. div tags stands for division
+  </p>
+  <hr />
+  <br />
+  <em>
+    <span style="color: brown; font-size: 18px">text inside span tag</span>
+  </em>
+  <!--an example of inline css. An inline css is used to apply unique style to a single html element. An inline css is applied by declaring a style  attribute inside html tag and defining properties which we want to apply to yhe tag-->
+  <p>
+    span tag is an inline tag they are used when you want to hook certain css
+    style or javascript function to a text inside another tag
+  </p>
+  <br />
+  <hr />
+  <em>the single tags br hr img</em>
+  <p>these tags are defined using single tags</p>
+  <p>br tag stands for break tag use to give space between two elements</p>
+  <hr />
+  <p>hr tag is use to give horizontal line between two elements</p>
+  <br />
+  <hr />
+  <em>image tag</em>
+  <div style="width:20%; height:20%; margin: auto">
+    <img src="./images/ninja.png" alt="ninja pic" style="width:100%; height:auto; margin: auto" />
+  </div>
+  <p>a tag also have attributes which give the properties to tag</p>
+  <p>
+    <em>src</em> attribute tells the browser the path and name of image from
+    where it renders the image
+  </p>
+  <p>
+    <em>alt</em> attribute is to give (alternative) name to the image in case
+    the browser fails to load the image or image is not present
+  </p>
+  <br />
+  <hr />
+  <em>anchor tag</em>
+  <a href="https://www.google.com" target="blank">GOOGLE</a>
+  <p>
+    anchor tag is use to convert text/image into a link which redirects
+    current homepage to another homepage
+  </p>
+  <p>
+    <em>href</em>href attribute contains the link of the website / or element
+    on the webpage it is redirected to
+  </p>
+  <p>
+    <em>target</em>target attribute specify wether the targeted link is open
+    in current window, another tab or in a new window
+  </p>
+  <p>target="blank opens website in new tab"</p>
+  <br />
+  <hr />
+  <em>blockquote></em>
+  <blockquote cite="https://www.oscarwildesite.com">
+    We are all in the gutters but some of us are looking at the stars
+  </blockquote>
+  <p>
+    blockquote tag is used when we are referencing some text from another
+    website
+  </p>
+  <p>text written in it have some margin or padding in the left</p>
+  <p>
+    the <em>cite</em> attribute of blockquote tells the source from where the
+    text is taken
+  </p>
+  <hr>
+  <br>
+  <strong> html5 form tags </strong>
+  <p><em>form tag</em>it contains all the components of the form for example
+    <ul>
+      <li>textbox</li>
+      <li>number</li>
+      <li>email</li>
+      <li>password</li>
+      <li>check boxes</li>
+      <li>radio button</li>
+      <li>dropdown selection</li>
+      <li>TextArea</li>
+      <li>and many more</li>
+    </ul>
+  </p>
+  <form action="" method="post">
+
+    <p>action attribute in form tag tells where the form data will go once we submit the form</p>
+
+    <p><em>label tag</em> is assigned to the input tag tell user about type of info </p>
+    <p><em>for attribute</em>for attribute present in the label tag assign the label to its perticular input tag. It
+      usually takes the id of the input tag & when we click on the label is associated input tag comes into focus</p>
+    <label for="username">Username</label>
+    <input type="text" id="username" placeholder="please provide Full Name" required>
+    <p><em>input tag</em> type of input field is defined in input tag</p>
+    <p><em>type attribute</em>defines what kind of input will be taken by the input field ie text, number, date,
+      email,password
+    </p>
+    <p><em>id attribute</em>it act as the identifier to the tag in which it is defined
+      <ul>
+        <li>id is unique to every tag </li>
+        <li>it is used in css asa hook to style that perticular tag/element</li>
+        <li>it is used with javascript to add some client side scripting or validation on the form</li>
+      </ul>
+    </p>
+    <p><em>placeholder attribute inside input tag gives some dummy text to the input box</em></p>
+    <p>you can make an input type required by writing required inside it</p>
+
+    <table>
+      <thead>
+        <th>attribute name</th>
+        <th>attribute description</th>
+      </thead>
+      <tr>
+        <td>autocomplete</td>
+        <td>
+          The autocomplete attribute specifies whether or not an input field should have autocomplete enabled.
+          Autocomplete allows the browser to predict the value. When a user starts to type in a field, the browser should display options to fill in the field, based on earlier typed values.
+        </td>
+      </tr>
+      <tr>
+        <td>autocorrect</td>
+        <td>use spell check and dictionary to check correctness of the word</td>
+      </tr>
+      <tr>
+        <td>spellcheck</td>
+        <td>The spellcheck attribute specifies whether the element is to have its spelling and grammar checked   or not. 
+        </td>
+      </tr>
+      <tr>
+        <td>focus</td>
+        <td>	A Boolean which, if present, makes the input take focus when the form is presented</td>
+      </tr>
+    </table>
+    
+    <p><em>input type number</em> takes only number as input comes with predefined validations</p>
+    <label for="age">Your Age</label>
+    <input type="number" id="age" required>
+    
+    <p><em>input type email</em> takes only email as input comes with predefined validations</p>
+    <label for="emailid">your Email-id</label>
+    <input type="email" id="emailid" required >
+    
+    <p><em>input type password</em> its is used to hide normal text comes with inbuilt validation</p>
+    <label for="passwd">Enter Password</label>
+    <input type="password" id="passwd" required>
+    <p>input type also has name attribute that helps to server side to fetch data from the website.It also used to group input field together </p>
+    <br>
+
+    <div class=radio-section>  
+      <em>radio button</em>
+      <strong>select your gender</strong>
+      <input type="radio" name="gender" id="male" value="male">
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="female" value="female">
+      <label for="female">Female</label>
+    </div>
+
+    <div class="checkbox-section">  
+      <em>checkbox</em>
+      <strong>select your hobby</strong>
+      <input type="checkbox" name="gardening" id="gardening" value="gardening">
+      <label for="gardening">gardening</label>
+      <input type="checkbox" name="dj" id="dj" value="dj">
+      <label for="dj">DJ</label>
+      <input type="checkbox" name="guitarist" id="guitarist" value="guitarist">
+      <label for="guitarist">guitarist</label>
+    </div>
+
+    <div class="select-section">
+      <label for="SelectColor">SELECT YOUR COLOR</label>
+      <select id="SelectColor">
+      <option value="Red">Red</option>
+      <option value="yellow">yellow</option>
+      <option value="green">Green</option>  
+      </select>
+    </div>
+
+    <br>
+    <br>
+
+    <label for="your-bio">YOUR BIO</label>
+    <textarea name="your-bio" id="your-bio" cols="30" rows="10" placeholder="tell something about yourself"></textarea>
+    <br>
+    <button type="submit">submit form</button>
+  </form>
+</body>
+</html>

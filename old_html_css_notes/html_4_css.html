@@ -1,0 +1,153 @@
+<!--
+    what is css
+    it stands for cascading stylesheets
+    its not a programming language
+    its stylesheet/styling language
+    used for website layout and design
+    alongside with markup like html and xhtml  
+    can be extended with sass/less
+-->
+<!--
+    css can be added to a html file in 3 ways
+    inline css(inside tag not a good practice)
+    internal css(inside the same html file using a <script> tag)
+    external css(making a external.css file ans linking it to the html file best practice)
+-->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        h2 {
+            color: blue;
+            font-family: cursive;
+        }
+    </style>
+    <!--internal css -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS_CHEATSHEET</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/css_cheatsheet.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <!--inline css example-->
+    <h1 style="color:red; font-family:Arial Narrow Bold">h1 tag styled using inline css</h1>
+    <h2>h2 tag using internal css</h2>
+    <h3>h3 tag using external css</h3>
+    content for body css
+    <div class="container">
+        <div class="box-1">
+            <h1>HELLO WORLD</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, amet! Aperiam neque quo commodi
+                excepturi iste, tempore, illo tenetur maiores at dignissimos quam cupiditate reiciendis voluptate
+                itaque accusamus rem labore.</p>
+        </div>
+        <div class="box-2">
+            <h1>BYE BYE WORLD</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat fugiat voluptatem modi temporibus
+                corporis voluptatum expedita perspiciatis nostrum atque, cumque, tempore voluptatibus. Aperiam, modi?
+                Nemo quaerat voluptatum provident ea ipsa?</p>
+        </div>
+        <div class="fruits-list">
+            <h2>FRUITS</h2>
+            <ul>
+                <li><a href="#appl">apple</a></li>
+                <li><a href="#mang">mango</a></li>
+                <li><a href="#banan">banana</a></li>
+                <li><a href="#gauvav">gauvava</a></li>
+            </ul>
+        </div>
+        <!--this will create a list-->
+        <!--creation of form -->
+        <form class="form" action="process.php" method="POST">
+            <label>First Name</label>
+            <input type="text" name="FirstName" placeholder="Enter First Name"><!--input text-->
+            <label>Last Name</label><!--label syntax-->
+            <input type="text" name="LastName" placeholder="Enter Last Name">
+            <label>Email</label>
+            <input type="email" name="Email" placeholder="Enter Email Address">
+            <label for="Message">Message</label>
+            <textarea name="Message" id="" cols="30" rows="10" placeholder="leave a comment"></textarea>
+            <label for="Gender">Gender</label>
+            <select name="Gender" id="">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Non Binary">Non Binary</option>
+                <option value="Other">Other</option>
+            </select>
+            <div>
+                <label for="Age">Age</label>
+                <input type="number" name="Age" placeholder="Enter Your Age">
+            </div>
+            <label for="Date Of Birth">Date of birth</label>
+            <input type="date" name="Date Of Birtth" placeholder="Enter Your Dob">
+            <div class="selection">
+                Fruits You Like<br>
+                <input type="checkbox" name="banana_checkbox" value="banana">BANANA<br>
+                <input type="checkbox" name="apple_checkbox" value="apple">APPLE<br>
+                <input type="checkbox" name="mango_checkbox" value="mango">MANGO</br>
+            </div>
+            <div class="selection">
+                DO YOU LIKE HTML<br>
+                <input type="radio" name="radio_input" value="true">
+                yes<br>
+                <input type="radio" name="radio_input" value="false">
+                no<br>
+            </div>
+            <div>
+                <input type="submit" class="button" value="submit the form">
+                <input type="button" class="button" value="button the button">
+            </div>
+        </form>
+        <div class=block>
+            <h3>the floating property</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam, laudantium.
+            </p>
+        </div>
+        <div class=block>
+            <h3>the floating property</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam, laudantium.
+            </p>
+        </div>
+        <div class=block>
+            <h3>the floating property</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam, laudantium.
+            </p>
+        </div>
+        <!--whenever you float item you need to clear it before using other markup using clear property-->
+        <div class="clearfix">
+        </div>
+        <div id="main">
+            <h1>HEADING</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, id?
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, id?
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, id?</p>
+        </div>
+        <div id="sidebar">
+            <p>lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, id?</p>
+        </div>
+        <div class="clearfix">
+        </div>
+        <div class="p-box">
+            <h1>HELLO</h1>
+            <h2>goodbye</h2>
+        </div>
+        <ul class="my-list">
+            <li>first</li>
+            <li>second</li>
+            <li>third</li>
+            <li>fourth</li>
+            <li>fifth</li>
+            <li>sixth</li>
+            <li>seventh</li>
+        </ul>
+    </div>
+    <!--end of container-->
+    <a href="#" class="fix-me button">I AM FIXED</a>
+</body>
+</html>

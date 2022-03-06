@@ -1,0 +1,354 @@
+/*
+
+    css selector and css declaration
+    a{backgroung-color:yellow;
+     }
+    where 'a' is a selector
+    'background-color' is property
+    'yellow' is value
+    ':' is property value seprator
+    ';' is declaration seprator
+    '{}' are depict declaration start and declaration end
+
+*/
+/*
+color in css
+1.html5 color name
+2. hexadecimal
+3. rgb
+body{
+    color:red;
+    color:#00ff00;
+    color:rgb(0,0,200);
+}
+*/
+/*
+    diffrence between class and id
+    id=elemets that are unique. id should not be used somwhere else.
+    class=classes can be reused on various elements
+    we mostly uses classes bootstrap only use classes
+*/
+/*box model
+  box model is defined in
+  paddinng<the space just around the content (e.g., around paragraph text).>
+  border<the solid line that sits just outside the padding.>
+  margin< the space around the outside of the element.>
+*/
+/**/
+/* *{
+    margin:0;
+    padding:0;
+    it is use to target all the elements on the web pages*
+}*/
+
+body{
+    background-color: #f4f4f4;
+    /*color value in hexadecimal*/
+    /*font-family: Arial, Helvetica, sans-serif;
+    /*
+        there are two types of font-family
+        web safe font family which does require to be imported.
+        then there is font-family that needs to be imported like ex- google fonts
+       font-family is times new roman in default
+    */
+    /*font-size: 22px;
+    /*set size of font*/
+    /*font-weight: bold;
+    /*font weight turns text into bold italic normal*/
+    /*we can also use below  inline declaration for declaring font-family font-size and font-family in one line */
+    /*font: font-weight_value font-size_value font-family_value*/
+    font: bold 20px  Arial, Helvetica, sans-serif;
+    line-height: 1.6em
+    /*we can use em as well as pixel(px) 
+      we use em  in case of responsivness
+    */
+    /*The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the page,*/
+    /*The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the page, though still remaining a part of the flow (in contrast to absolute positioning).*/
+}
+
+h3{
+    color: green;
+    font: italic;
+}
+
+.container{
+    width: 80%;/*use % in case of responsivness*/
+    margin: auto;
+    /*width: 500px;/*960px is popular between non responsive website*/
+    /*for responsivness we use % as measuring unit of pixels so*/
+
+}
+
+.clearfix{
+    content: "";
+    display: block; 
+    clear: both;
+}
+/*The clear property specifies on which sides of an element floating elements are not allowed to float.
+clear: none|left|right|both|initial|inherit;
+none	Default. Allows floating elements on both sides
+left	No floating elements allowed on the left side
+right	No floating elements allowed on the right side
+both	No floating elements allowed on either the left or the right side
+*/
+
+.box-1{
+    background-color: #333;
+    color: #f4f4f4;
+    border-right:5px red solid;
+    /*borde: size color type*/
+    border-left:5px red solid;
+    border-bottom:5px red solid;
+    border-bottom:5px red solid;
+    /*short hadbove css when you need to keep all border same*/
+    border:5px red solid;
+    /*we can also target a specific property like size color type*/
+    border-width:3px;
+    border-bottom-width:10px;
+    border-top-style:dotted;
+    /*border style are dotted dash and solid*/
+    /*PADDING*/
+    /*long way*/
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    /*
+      short hand
+      padding: top right bottom left
+      padding: top/right/bottom/left(when you want same padding on all sides)
+      padding: top/bottom left/right(when you want same padding on opposite sides)
+    */
+    padding: 20px;
+    /*same as above*/
+    /*MARGIN*/
+    margin-top: 20px;
+    /*
+      short hand
+      margin: top right bottom left
+      margin: top/right/bottom/left(when you want same padding on all sides)
+      margin: top/bottom left/right(when you want same padding on opposite sides)
+    */
+    margin: 20px 0;
+}
+
+.box-1 h1{
+    /*TEXT FORMATTING STYLE*/
+    font-family: tahoma;
+    /*change of font family*/
+    font-style: italic;
+    /*change of font style*/
+    font-weight: 800;
+    /*change of font weight*/
+    text-decoration: underline ;
+    /*text underline*/
+    text-transform: uppercase;
+    /*trnsforms text into upper case or lower case*/
+    letter-spacing: 0.2em;
+    word-spacing: 0.5em;
+}
+
+.box-2{
+    border: 3px rgb(23, 0, 230) dotted;
+    padding: 20px;
+    margin:20px 0; 
+}
+
+.fruits-list{
+ border: 1px #ccc solid;
+ border-radius: 15px;
+ /*turn edges of the box into rounded corners*/
+ padding: 10px;
+}
+
+.fruits-list h2{
+    text-align: center;
+}
+
+.fruits-list ul{
+    padding: 20px;
+    list-style: none;
+}
+/*LIST STYLLING8*/
+
+.fruits-list a{
+    text-decoration: none;
+    color: rgb(116, 39, 167);
+}
+
+.fruits-list a:hover{
+    color: chartreuse;
+}
+
+.fruits-list a:active{
+    color: darkblue;
+}
+
+.fruits-list a:visited{
+    color: rgb(0, 0, 0);
+}
+
+.fruits-list li{
+    padding:0px 0px 3px 0px;
+    border-bottom:3px black dotted;  
+    list-style: georgian;
+}
+
+.button{
+    display:inline;
+    margin-top:10px;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 10px;
+    border-style: solid;
+    padding:10px;
+    text-align: center;
+}
+
+.button:hover{
+    background-color: whitesmoke;
+    color: black;
+    cursor: pointer;
+}
+
+.form{
+    border: 50px #312525 double;
+    padding: 5px;
+}
+
+.form label{
+display: block;
+}
+
+.form input[type="text"],.form input[type="email"],.form textarea{
+    border: 1px #ccc solid;
+    border-radius: 15px;
+    width:80%;
+    padding: 10px;
+}
+
+.form input[type="date"],.form input[type="number"],.form select{
+    border: 1px #ccc solid;
+    border-radius: 15px;
+    width:50%;
+    padding: 10px;
+}
+
+.form input[type="checkbox"],.form input[type="radio"]
+{
+    margin: 10px;   
+}
+
+.selection
+{
+    border-radius:10px;
+    background-color: #ccc;
+    margin:10px 0px;
+    padding:10px;
+}
+
+.block{
+    margin-top:5px;
+    float:left;
+    width:33.3%;
+    border: 2px #ccc solid;
+    padding:10px;
+    box-sizing:border-box;
+}
+
+#main{
+    width:70%;
+    height: auto;
+    float:left;
+    margin-top:10px;
+    padding: 10px;
+    border: 2px black solid;
+    box-sizing:border-box;
+    /**/
+}
+
+#sidebar{
+    width:30%;
+    height: auto;
+    margin-top:10px;
+    padding: 10px;
+    float:left;
+    border: 2px black solid;
+    box-sizing:border-box;
+}
+
+.p-box{
+    border: 2px black solid;
+    height: 500px;
+    border-radius: 5px;
+    padding-bottom:10px; 
+    position: relative;
+    background-image: url('../images/image1.jpg');
+    background-position: 100px 200px;
+    background-repeat:no-repeat;
+    background-position:center top;
+}
+
+.p-box h1{
+position: absolute;
+color: coral;
+top: 10px;
+left: 20px;
+}
+/*for an element to be absolute its parent element should be relative */
+.p-box h2{
+    position: absolute;
+    color: coral;
+    bottom: 10px;
+    right: 20px;
+}
+
+.fix-me
+{
+    position: fixed;
+    top: 200px;
+    margin-left: 0px;
+    text-decoration: none;
+}
+
+.my-list li:first-child{
+background: red;
+list-style: none;
+}
+
+.my-list li:last-child{
+background: yellow;
+}
+
+.my-list li:nth-child(5){
+background: #ccc;
+list-style: none;
+}
+
+.my-list li:nth-child(even){
+    background:plum;
+    list-style: none;
+}
+
+/*display: property
+The display property specifies the display behavior (the type of rendering box) of an element.
+inline--->Displays an element as an inline element (like <span>). Any height and width properties will have no effect	
+block--->Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width	
+contents--->Makes the container disappear, making the child elements children of the element the next level up in the DOM
+
+inline-block--->Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values.
+
+inline-flex--->Displays an element as an inline-level flex container	
+inline-grid--->Displays an element as an inline-level grid container	
+inline-table--->The element is displayed as an inline-level table	
+list-item-->Let the element behave like a <li> element	
+run-in--->Displays an element as either block or inline, depending on context	
+table--->Let the element behave like a <table> element
+*/
+
+
+/*position property
+https://medium.freecodecamp.org/how-to-use-the-position-property-in-css-to-align-elements-d8f49c403a26
+*/
+    
+    
